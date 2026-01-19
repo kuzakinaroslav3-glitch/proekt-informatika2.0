@@ -1,0 +1,167 @@
+/* ===== СБРОС ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ЦВЕТА  */
+:root {
+    --bg1: #0f2027;
+    --bg2: #203a43;
+    --bg3: #2c5364;
+    --card: #1e1e2f;
+    --accent: #00c6ff;
+    --text: #ffffff;
+}
+
+/*  ФОН С АНИМАЦИЕЙ  */
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(-45deg, var(--bg1), var(--bg2), var(--bg3));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/*  ШАПКА */
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--accent);
+}
+
+header p {
+    opacity: 0.8;
+}
+
+/*  СЕКЦИИ */
+section {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: rgba(0,0,0,0.4);
+    border-radius: 16px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*  ФОРМЫ  */
+select, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 8px;
+}
+
+button {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,198,255,0.6);
+}
+
+/*  КАРТОЧКИ */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.gpu-card {
+    background: linear-gradient(145deg, #1c1c2b, #232336);
+    border-radius: 12px;
+    padding: 15px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.gpu-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.08), transparent);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gpu-card:hover::before {
+    opacity: 1;
+}
+
+.gpu-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.gpu-card h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/*  ТАБЛИЦА */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+
+th {
+    color: var(--accent);
+}
+
+/*  ФУТЕР */
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.6;
+}
+.win {
+    color: #00ff9c;
+    font-weight: bold;
+}
+
+.lose {
+    color: #ff5c5c;
+    opacity: 0.8;
+}
+
+.equal {
+    color: #ffd000;
+}
+
+.arrow {
+    margin-left: 6px;
+    font-size: 14px;
+}

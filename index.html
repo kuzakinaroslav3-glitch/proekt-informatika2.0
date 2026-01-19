@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>GPU Compare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Сравнение видеокарт</h1>
+
+<div class="controls">
+    <select id="gpu1">
+        <option value="">Выбери первую GPU</option>
+    </select>
+
+    <select id="gpu2">
+        <option value="">Выбери вторую GPU</option>
+    </select>
+
+    <button id="compareBtn">Сравнить</button>
+</div>
+
+<section id="result" style="display:none;">
+    <h2 id="gpu1Name"></h2>
+    <h2 id="gpu2Name"></h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Параметр</th>
+                <th>GPU 1</th>
+                <th>GPU 2</th>
+            </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+    </table>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
