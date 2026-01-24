@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPU Compare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <h1>Сравнение видеокарт</h1>
+    <p>Выбери две GPU — сайт покажет ключевые характеристики и отличия.</p>
+</header>
+
+<main class="container">
+    <section class="panel">
+        <div class="controls">
+            <label class="field">
+                <span>GPU 1</span>
+                <select id="gpu1">
+                    <option value="">Выбери первую GPU</option>
+                </select>
+            </label>
+
+            <label class="field">
+                <span>GPU 2</span>
+                <select id="gpu2">
+                    <option value="">Выбери вторую GPU</option>
+                </select>
+            </label>
+
+            <button id="compareBtn" class="btn-primary">Сравнить</button>
+        </div>
+        <p class="hint">Подсказка: на телефоне таблица прокручивается по горизонтали.</p>
+    </section>
+
+    <section id="result" class="panel" style="display:none;">
+        <div class="result-head">
+            <h2 id="gpu1Name"></h2>
+            <div class="vs">VS</div>
+            <h2 id="gpu2Name"></h2>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Параметр</th>
+                        <th>GPU 1</th>
+                        <th>GPU 2</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <small>GPU Compare • локальный проект</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
