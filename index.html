@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPU Compare | Boundless</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-layer bg-grid"></div>
+<div class="bg-layer bg-glow bg-glow-a"></div>
+<div class="bg-layer bg-glow bg-glow-b"></div>
+
+<header class="site-header container">
+    <p class="eyebrow">BOUNDLESS EDITION</p>
+    <h1>Сравнение видеокарт</h1>
+    <p class="lead">Выбери две GPU и получи наглядное сравнение ключевых характеристик в одном экране.</p>
+    <div class="meta-line">
+        <span><strong id="gpuCount">0</strong> моделей в базе</span>
+        <span>Новый расширенный список</span>
+    </div>
+</header>
+
+<main class="container">
+    <section class="panel controls-panel">
+        <div class="controls">
+            <label class="field">
+                <span>Первая видеокарта</span>
+                <select id="gpu1">
+                    <option value="">Выберите первую GPU</option>
+                </select>
+            </label>
+
+            <label class="field">
+                <span>Вторая видеокарта</span>
+                <select id="gpu2">
+                    <option value="">Выберите вторую GPU</option>
+                </select>
+            </label>
+
+            <button id="compareBtn" class="btn-primary">Сравнить</button>
+        </div>
+        <p class="hint">На телефоне таблица прокручивается по горизонтали.</p>
+    </section>
+
+    <section id="result" class="panel result-panel" hidden>
+        <div class="result-head">
+            <h2 id="gpu1Name"></h2>
+            <div class="vs">VS</div>
+            <h2 id="gpu2Name"></h2>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Параметр</th>
+                        <th>GPU 1</th>
+                        <th>GPU 2</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <small>GPU Compare • Кузакин Ярослав 11К</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
